@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	 $("p").click(function(){
+	        $(this).hide();
+	    });
+    $("#inputId1").focusout(function(){
+        //callFunction();
+    });
+    $("#inputId2").focusout(function(){
+        callFunction();
+    });
+});
+function callFunction(){
+ if($("#inputId1").val()!=0 && $("#inputId1").val()!=undefined &&
+		 $("#inputId2").val()!=0 && $("#inputId2").val()!=undefined){
+ var startDate = $("#inputId1").val();
+ var endDate = $("#inputId2").val();
+ var selectedStartMonth = parseInt(startDate.substring(5,7));
+ var selectedEndMonth = parseInt(endDate.substring(5,7));
+ var selectedStartYear = parseInt(startDate.substring(0,4));
+ var addedMonthValue;
+ var calculatedMonthValue;
+ var calculatedDateValue;
+ var calculatedYearValue=endDate.substring(0,4)-startDate.substring(0,4);
+ var addedDays=0;
+ var addedDateValue=0;
+ var incrementer;
+if(calculatedYearValue!=0){
+ addedMonthValue=(calculatedYearValue*12);
+ calculatedMonthValue=(selectedEndMonth+addedMonthValue)-parseInt(startDate.substring(5,7));
+ } else{
+  	 calculatedMonthValue=parseInt(endDate.substring(5,7))-parseInt(startDate.substring(5,7));
+	}
+for(incrementer=0;incrementer<calculatedMonthValue;incrementer++){
+if(calculatedMonthValue!=0){
+	if(selectedStartMonth<=6){
+		if((selectedStartMonth%2==0)&&!(selectedStartMonth==2)){
+		addedDays=addedDays+30;
+		} else if(selectedStartMonth==2){
+			if(selectedStartYear%4==0&&selectedStartYear%100==0&&selectedStartYear%400==0){
+				addedDays=addedDays+29;
+			} else {
+				addedDays=addedDays+28;
+			}
+			} else {
+			addedDays=addedDays+31;
+		}
+    } else {
+			if(selectedStartMonth%2==0||selectedStartMonth==7){
+			addedDays=addedDays+31;
+			} else {
+			addedDays=addedDays+30;
+			}
+		}
+} else {
+	 calculatedDateValue=parseInt(endDate.substring(8,10))-parseInt(startDate.substring(8,10));	
+	}
+ 	addedDateValue=addedDays;
+ 	if(selectedStartMonth==12){
+ 		selectedStartMonth=1;
+ 	} else {
+ 		selectedStartMonth++;
+ 		}
+	}
+	calculatedDateValue=(parseInt(endDate.substring(8,10))+addedDateValue)-parseInt(startDate.substring(8,10));
+	$('#no_of_days_leave_text').val(calculatedDateValue+1);
+  }
+}
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<input type="date" id="inputId1"></input>
+<input type="date" id="inputId2"></input>
+<p id="output"></p>
+<input id="no_of_days_leave_text" type="text"/>
+
+</body>
+</html>
