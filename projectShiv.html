@@ -35,14 +35,14 @@
 			<input id="toDateText" type="date" data-ng-model="endDate" data-ng-blur="isFocused=true"/>
 			<label id="leaveDaysLabel">Total No. of days Leave:</label>
 			<input id="leaveDaysText" type="text" readonly></input> 
-			<input id="submit" type="submit" onclick="myFunction()"/>
+			<input id="submit" type="submit"/>
 		</div>
 	</div>
 	<script>
 	var app = angular.module('myApp', []);
 	app.controller('myCtrl', function($scope) {
-	    $scope.firstName = "John";
-	    $scope.lastName = "Doe";
+	    $scope.startDate = "John";
+	    $scope.endDate = "Doe";
 	});
 	</script>
 </body>
