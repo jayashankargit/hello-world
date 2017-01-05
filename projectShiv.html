@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>leave application form</title>
+
+<link rel="stylesheet" type="text/css" href="project.css">
+<script src="project.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<h2 id="h1">leave application form</h2>
+</head>
+<body>
+	<div id="div1" data-ng-app="myApp" data-ng-controller="myCtrl">
+		<div id="div2">
+			<label id="employeeLabel">Employee-Id:</label> 
+			<input id="employeeId" type="text" maxlength="5" /> 
+			<label id="nameLabel">Name</label>
+			<input id="text" type="text" readonly/> 
+			<label id="designationLabel">Designation</label>
+			<input id="designationText" type="text" readonly/> 
+			<label id="llLabel">LabLeader-Name:</label>
+			<input id="llText" type="text" readonly/>
+			<label id="pmoLabel">ProjectManager-Name:</label>
+			<input id="pmoText" type="text" readonly/> 
+			<label id="typeOfLeaveLabel">Type of Leave:</label> 
+			<select id="typeofLeaveCombo">
+				<option></option>
+				<option>Casual Leave</option>
+				<option>Sick Leave</option>
+			</select>
+			<label id="startDateLabel">Start Date:</label>
+			<input id="startDateText" type="date" data-ng-model="startDate"/>
+			<label id="tildeLabel">~</label>
+			<label id="toDateLabel">To Date:</label>
+			<input id="toDateText" type="date" data-ng-model="endDate" data-ng-blur="isFocused=true"/>
+			<label id="leaveDaysLabel">Total No. of days Leave:</label>
+			<input id="leaveDaysText" type="text" readonly></input> 
+			<input id="submit" type="submit"/>
+		</div>
+	</div>
+</body>
+</html>

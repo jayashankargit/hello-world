@@ -1,0 +1,198 @@
+@CHARSET "ISO-8859-1";
+
+#name {
+	background-color ="red";
+	border-style ="solid";
+}
+
+#demo {
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+}
+
+#h1 {
+	left: 40%;
+	position: absolute;
+}
+
+#div1 {
+	position: absolute;
+	top: 88px;
+	left: 20px;
+	height: 87%;
+	width: 97%;
+	border-style: double;
+}
+
+#div2 {
+	position: absolute;
+	height: 98%;
+	width: 100%;
+	top: 20px;
+	left: 20px;
+}
+
+#label1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#name {
+	position: absolute;
+	left: 112px;
+}
+
+#text {
+	position: absolute;
+	left: 390px;
+	background-color: lightblue;
+}
+
+#label2 {
+	position: absolute;
+	left: 0px;
+	top: 42px;
+}
+
+#emp {
+	position: absolute;
+	top: 42px;
+	left: 112px;
+}
+
+#employeeId {
+	position: absolute;
+	left: 160px;
+}
+
+#nameLabel {
+	position: absolute;
+	left: 340px;
+}
+
+#designationLabel {
+	position: absolute;
+	left: 0px;
+	top: 27px;
+}
+
+#designationText {
+	position: absolute;
+	top: 27px;
+	left: 160px;
+	background-color: lightblue;
+}
+
+#llLabel {
+	position: absolute;
+	top: 52px;
+	left: 0px;
+}
+
+#llText {
+	position: absolute;
+	top: 52px;
+	left: 160px;
+	background-color: lightblue;
+}
+
+#pmoLabel {
+	position: absolute;
+	top: 78px;
+	left: 0px;
+}
+
+#pmoText {
+	position: absolute;
+	top: 78px;
+	left: 160px;
+	background-color: lightblue;
+}
+
+#designationLabel {
+	position: absolute;
+	left: 0px;
+	top: 27px;
+}
+
+#typeofLeaveCombo {
+	position: absolute;
+	top: 103px;
+	left: 160px;
+}
+
+#llLabel {
+	position: absolute;
+	top: 52px;
+	left: 0px;
+}
+
+#pmoLabel {
+	position: absolute;
+	top: 78px;
+	left: 0px;
+}
+
+#typeOfLeaveLabel {
+	position: absolute;
+	top: 103px;
+	left: 0px;
+}
+
+#startDateLabel {
+	position: absolute;
+	top: 130px;
+	left: 0px;
+}
+
+#startDateText {
+	position: absolute;
+	top: 130px;
+	left: 160px;
+}
+
+#tildeLabel {
+	position: absolute;
+	top: 130px;
+	left: 320px;
+}
+
+#toDateLabel {
+	position: absolute;
+	top: 130px;
+	left: 340px;
+}
+
+#toDateText {
+	position: absolute;
+	top: 130px;
+	left: 400px;
+}
+
+#leaveDaysLabel {
+	position: absolute;
+	top: 157px;
+	left: 0px;
+}
+
+#leaveDaysText {
+	position: absolute;
+	top: 157px;
+	left: 160px;
+	background-color: lightblue;
+}
+
+#tildeLabel {
+	position: absolute;
+	top: 130px;
+	left: 320px;
+}
+
+#submit {
+	position: absolute;
+	top: 192px;
+	left: 160px;
+}
